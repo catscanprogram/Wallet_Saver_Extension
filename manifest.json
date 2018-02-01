@@ -1,0 +1,27 @@
+{
+	"name": "Wallet Saver",
+	"description": "Censor your favorite shopping websites to prevent impulse purchases.",
+	"version": "2.0",
+	"homepage_url": "http://www.jeffreythompson.org",
+	"browser_action": {
+		"default_title": "Wallet Saver",
+		"default_icon:": "icon128.png"
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	],
+	"icons": { 
+		"48": "icon48.png",
+	   "128": "icon128.png" 
+	},
+	"background": {
+		"scripts": [ "background.js" ],
+		"persistent": true
+	},
+	"content_scripts": [{
+		"matches": [ "<all_urls>" ],
+		"js": [ "jquery-3.2.1.min.js" ]
+	}],
+	"manifest_version": 2
+}
